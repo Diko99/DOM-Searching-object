@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>learning js</title>
+     <link rel="stylesheet" href="/style.css">
+     <link rel="stylesheet" href="/src/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <img src="/l.jpeg" alt="" style="width: 90px;">
+          <a href="#" class="navbar-brand">Olshop Emaku</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+                          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">              
+               <form class="form-inline my-2 my-lg-0" id="formcari" >
+                    <input type="text" class="form-control my-2 my-lg-0" placeholder="Cari Barang" aria-label="Cari Barang" id="keyword" >
+                    <button class="btn btn-outline-success my-2 my-lg-0">Cari</button>
+               </form>
+
+
+               <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                         <a href="" class="nav-link">Barang</a>
+                    </li>
+                    <li class="nav-item">
+                         <a href="" class="nav-link">Daftar Harga</a>
+                    </li>
+                    <li class="nav-item">
+                         <a href="" class="nav-link">Menu</a>
+                    </li>
+               </ul>
+          </div>
+     </nav>
+</div>
+
+
+
+
+
+     <h1 class="text-success text-center mt-5 mb-5">Online Shoope</h1>
+     <div class="container text-center ">
+          <div class="row" id="listbarang">
+
+          </div>
+     </div>
+     
+<body>
+<input type='text' id='input' onkeyup='searchTable()'>
+<table id='table'>
+   <thead>
+   <tr>
+      <th>Nama</th>
+      <th>Jenis Kelamin</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>Rindi</td>
+      <td>Wanita</td>
+   </tr>
+   <tr>
+      <td>Gofur</td>
+      <td>Pria</td>
+   </tr>
+   <tr>
+      <td>Faiqunnuha</td>
+      <td>Pria</td>
+   </tr>
+   </tbody>
+</table>
+</body>
+<script>
+function searchTable() {
+    var input;
+    var saring;
+    var status; 
+    var tbody; 
+    var tr; 
+    var td;
+    var i; 
+    var j;
+    input = document.getElementById("input");
+    saring = input.value.toUpperCase();
+    tbody = document.getElementsByTagName("tbody")[0];;
+    tr = tbody.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
+                status = true;
+            }
+        }
+        if (status) {
+            tr[i].style.display = "";
+            status = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
+     
+     
+     
+     
+     
+     
+     <script src="/main/main.js"></script>
+     <!-- <script src="/main/app.js"></script> -->
+
+
+
+
+
+</body>
+</html>

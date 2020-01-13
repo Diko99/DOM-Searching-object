@@ -1,0 +1,11 @@
+body{
+     margin: 0;
+     padding: 0;
+}
+form.form-inline{
+     margin-left: auto;
+}
+ul.navbar-nav{
+     margin-left: auto;
+}
+
